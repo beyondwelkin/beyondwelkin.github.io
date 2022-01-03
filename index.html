@@ -13,14 +13,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1>Hello, we are Beyond Welkin</h1>
-    <h1>We welcome you all.</h1>
-    <div data-include="import.html"></div>
-    <section id ="about">
-      <div data-include="About.html"></div>
+    <section id="home" class="">
+        <div class="flex text-center">
+            <div class="z-0 my-auto">
+                <h1 class="font-bold" style="font-size: 130px;">Beyond Welkin</h1>
+                <h2 class="font-semibold pt-2" style="font-size: 70px;">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</h1>
+            </div>
+            <lottie-player class="ml-auto z-10" src="https://assets6.lottiefiles.com/packages/lf20_l4ny0jjm.json" background="transparent"  speed="1"  style="width: 950px; height: 950px;" loop autoplay></lottie-player>
+        </div>
     </section>
-    <section class="">
-        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_l4ny0jjm.json" background="transparent"  speed="1"  style="width: 650px; height: 650px;" loop autoplay></lottie-player>
+    <section id ="about">
+        <div data-include="About.html"></div>
+      </section>
+    <section id="contact">
+        <div class="md:m-2 m-6 w-1/2 items-center flex">
+            <div class="" data-include="Contact.html"></div>
+            <lottie-player class="ml-auto z-10" src="https://assets6.lottiefiles.com/packages/lf20_l4ny0jjm.json" background="transparent"  speed="1"  style="width: 750px; height: 750px;" loop autoplay></lottie-player>
+        </div>
+
     </section>
   <style>
       iframe[seamless] {
