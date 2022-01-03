@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayyeye aapko Navbar dikhate h</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        background-color: black;
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+    }
+
+    #nav {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0px;
+        height: 65px;
+        width: 100%;
+    }
+
+    .navul {
+        display: flex;
+    }
+
+    .navitems {
+        list-style: none;
+        font-size: 28px;
+    }
+
+    .items {
+        color: white;
+        padding: 10px 33px;
+        display: block;
+        text-decoration: none;
+    }
+
+    .items:hover {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    #logo {
+        margin-top: 10px;
+        margin-left: 60px;
+        height: 180px;
+        width: 200px;
+    }
+
+    .btn-4 {
+        position: relative;
+        /* display: block; */
+        color: white;
+        z-index: 2;
+        line-height: 40px;
+        padding: 10px 33px;
+        background-color: black;
+    }
+
+    .btn-4:hover {
+        border: none;
+    }
+
+    .btn-4:before,
+    .btn-4:after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 0%;
+        border: 2px solid;
+        z-index: -1;
+        transition: all 0.3s ease;
+    }
+
+    .btn-4:before {
+        top: 0;
+        left: 0;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        border-top-color: white;
+        border-left-color: white;
+    }
+
+    .btn-4:after {
+        bottom: 0;
+        right: 0;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: white;
+        border-right-color: white;
+    }
+
+    .btn-4:hover:before,
+    .btn-4:hover:after {
+        border-color: white;
+        height: 100%;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <section>
+        <nav id="nav">
+
+            <ul class="navul">
+                <li class="navitems"><a href="" class="items"> Home </a></li>
+                <li class="navitems"><a href="" class="items"> Vision </a></li>
+                <li class="navitems"><a href="" class="items"> About </a></li>
+
+            </ul>
+            <img src="IMG_20220103_220808.png" alt="" id="logo">
+            <ul class="navul">
+                <li class="navitems"><a href="" class="items">Blogs</a></li>
+                <li class="navitems"><a href="" class="items">Donate</a></li>
+                <li class="navitems"><button class="custom-btn btn-4">Join Us</button></li>
+            </ul>
+
+
+
+        </nav>
+    </section>
+</body>
+
+</html>
