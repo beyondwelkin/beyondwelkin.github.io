@@ -8,79 +8,68 @@
     <title>Ayyeye aapko Navbar dikhate h</title>
 </head>
 <style>
-    .items:hover {
-        text-decoration: underline;
-        font-weight: bold;
-    }
-
-    .btn-4 {
-        position: relative;
-        /* display: block; */
-        color: white;
-        z-index: 2;
-        line-height: 40px;
-        padding: 10px 33px;
-        background-color: black;
-    }
-
-    .btn-4:hover {
-        border: none;
-    }
-
-    .btn-4:before,
-    .btn-4:after {
-        position: absolute;
-        content: "";
-        width: 0%;
-        height: 0%;
-        border: 2px solid;
-        z-index: -1;
-        transition: all 0.3s ease;
-    }
-
-    .btn-4:before {
-        top: 0;
-        left: 0;
-        border-bottom-color: transparent;
-        border-right-color: transparent;
-        border-top-color: white;
-        border-left-color: white;
-    }
-
-    .btn-4:after {
-        bottom: 0;
-        right: 0;
-        border-top-color: transparent;
-        border-left-color: transparent;
-        border-bottom-color: white;
-        border-right-color: white;
-    }
-
-    .btn-4:hover:before,
-    .btn-4:hover:after {
-        border-color: white;
-        height: 100%;
-        width: 100%;
-    }
+    ul { 
+  margin:  auto 0; 
+  padding: 0; 
+  list-style: none; 
+  display: table;
+  width: 600px;
+  text-align: center;
+}
+li { 
+  display: table-cell; 
+  position: relative; 
+  padding: 15px 0;
+}
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+  position: relative;
+}
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
 </style>
 
 <body>
-    <div class="w-full flex text-4xl justify-between pt-4">
-        <nav class="flex w-full justify-between">
+    <div class="w-full flex text-xl justify-around pt-4">
+        <nav class="flex w-full justify-around">
             <ul class="flex w-1/3 justify-around">
                 <li class=""><a href="" class="items"> Home </a></li>
                 <li class=""><a href="" class="items"> Vision </a></li>
                 <li class=""><a href="" class="items"> About </a></li>
+                <li class=""><a href="" class="items"> Contact us </a></li>
 
             </ul>
-            <img src="IMG_20220103_220808.png" alt="" id="logo" class="w-80 h-52 ">
-            <ul class="flex justify-around w-1/3">
+            <div class="flex mt-8">
+                <img src="IMG_20220103_220808.png" alt="" id="logo" class="w-12 h-8">
+                <p class="pl-2 text-2xl">BEYOND WELKIN</p>
+            </div>
+            <ul class="flex justify-around w-1/3 mt-4">
                 <li class=""><a href="" class="items">Blogs</a></li>
-                <li class=""><a href="" class="items px-auto">Donate</a></li>
-                <li class=""><button class="custom-btn btn-4">Join Us</button></li>
+                <li class=""><a href="" class="items px-auto">Media</a></li>
+                <li class=" p"><a href="" class="items"> Donate </a></li>
+                <li class=""><button class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-indigo-500 hover:to-purple-500 rounded-2xl px-6 py-3 text-lg">Join us</button></li>
             </ul>
         </nav>
-        </div>
+    </div>
     </section>
 </body>
 
