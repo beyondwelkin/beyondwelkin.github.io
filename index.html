@@ -1,95 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/gh/LexmarkWeb/csi.js@0.1.0/csi.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body >
 
-    <div data-include="nav.html"></div>
-    <section id="home" class="">
-        <div class="flex text-center">
-            <div class="z-0 my-auto">
-                <h1 class="font-bold" style="font-size: 120px;">Beyond Welkin</h1>
-                <h2 class="font-semibold pt-2" style="font-size: 60px;">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/gh/LexmarkWeb/csi.js@0.1.0/csi.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <div data-include="nav.html"></div>
+  <section id="home" class="">
+    <div class="flex text-center">
+      <div class="z-0 my-auto">
+        <h1 class="font-bold" style="font-size: 120px;">Beyond Welkin</h1>
+        <h2 class="font-semibold pt-2" style="font-size: 60px;">"Lorem ipsum dolor sit amet consectetur adipisicing
+          elit."</h1>
+      </div>
+      <lottie-player class="ml-auto z-10" src="https://assets6.lottiefiles.com/packages/lf20_l4ny0jjm.json"
+        background="transparent" speed="1" style="width: 950px; height: 800px;" loop autoplay></lottie-player>
+    </div>
+  </section>
+  <p class="text-white underline mx-auto w-full text-center" style="font-size: 78px;">Our Team</p>
+  <section id="about">
+    <div data-include="About.html"></div>
+  </section>
+  <p class="text-white underline mx-auto w-full text-center" style="font-size: 78px;">Contact Us</p>
+  <section id="contact">
+    <div class="md:m-2 m-6 flex mr-auto text-left">
+      <div class="w-2/3 mr-auto">
+        <div>
+          <form class="w-full max-w-lg ml-6" id="myForm">
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
+                  First Name
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  name="name" id="name" type="text">
+              </div>
             </div>
-            <lottie-player class="ml-auto z-10" src="https://assets6.lottiefiles.com/packages/lf20_l4ny0jjm.json" background="transparent"  speed="1"  style="width: 950px; height: 800px;" loop autoplay></lottie-player>
-        </div>
-    </section>
-    <p class="text-white underline mx-auto w-full text-center" style="font-size: 78px;">Our Team</p>
-    <section id ="about">
-        <div data-include="About.html"></div>
-    </section>
-    <p class="text-white underline mx-auto w-full text-center" style="font-size: 78px;">Contact Us</p>
-    <section id="contact">
-        <div class="md:m-2 m-6 flex mr-auto text-left">
-            <div class="w-2/3 mr-auto">
-                <div>
-                    <form class="w-full max-w-lg ml-6" id="myForm">
-                        <div class="flex flex-wrap -mx-3 mb-6">
-                          <div class="w-full px-3 mb-6 md:mb-0">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
-                              First Name
-                            </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="name" id="name" type="text">
-                          </div>
-                        </div>
-                        <div class="flex flex-wrap -mx-3 mb-6">
-                          <div class="w-full px-3 mb-6 md:mb-0">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
-                              Subject
-                            </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="subject" id="subject" type="text">
-                          </div>
-                        </div>
-                        <div class="flex flex-wrap -mx-3 mb-6">
-                          <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
-                              E-mail
-                            </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" name="email" type="email">
-                          </div>
-                        </div>
-                        <div class="flex flex-wrap -mx-3 mb-6">
-                          <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="content">
-                              Message
-                            </label>
-                            <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message" name="message"></textarea>
-                          </div>
-                        </div>
-                        <button class="text-black bg-white p-2 rounded-md hover:bg-black hover:text-white px-3 text-lg" type="submit">Send</button>
-                      </form>
-                    </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
+                  Subject
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  name="subject" id="subject" type="text">
+              </div>
             </div>
-            <lottie-player class="ml-auto z-10" src="https://assets6.lottiefiles.com/packages/lf20_Ns4TLz.json" background="transparent"  speed="1"  style="width: 750px; height: 600px;" loop autoplay></lottie-player>
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
+                  E-mail
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="email" name="email" type="email">
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="content">
+                  Message
+                </label>
+                <textarea
+                  class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+                  id="message" name="message"></textarea>
+              </div>
+            </div>
+            <button class="text-black bg-white p-2 rounded-md hover:bg-black hover:text-white px-3 text-lg"
+              type="submit">Send</button>
+          </form>
         </div>
-    </section>
-    
+      </div>
+      <lottie-player class="ml-auto z-10" src="https://assets6.lottiefiles.com/packages/lf20_Ns4TLz.json"
+        background="transparent" speed="1" style="width: 750px; height: 600px;" loop autoplay></lottie-player>
+    </div>
+  </section>
+
   <style>
-      iframe[seamless] {
-    border: none;
+    iframe[seamless] {
+      border: none;
     }
+
     body {
-	background-color:#000000;
-    color: white;
-    height: 768px;
-    width: 1340px;
-    margin: auto;
+      background-color: #000000;
+      color: white;
+      height: 768px;
+      width: 1340px;
+      margin: auto;
     }
   </style>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-    (function() {
-    emailjs.init("user_jL7r03hS7oWWGmE2pDwRf");
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_jL7r03hS7oWWGmE2pDwRf");
     })();
-    </script>
-    <script src="scripts/contact.js"></script>
+  </script>
+  <script src="scripts/contact.js"></script>
 </body>
+
 </html>
