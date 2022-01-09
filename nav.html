@@ -8,6 +8,29 @@
     <title>Ayyeye aapko Navbar dikhate h</title>
 </head>
 <style>
+    #navbar {
+  overflow: hidden;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar li {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  padding: 15px;
+}
+
     ul { 
   margin:  auto 0; 
   padding: 0; 
@@ -15,11 +38,6 @@
   display: table;
   width: 600px;
   text-align: center;
-}
-li { 
-  display: table-cell; 
-  position: relative; 
-  padding: 15px 0;
 }
 a {
   color: #fff;
@@ -49,20 +67,20 @@ a:hover:after {
 </style>
 
 <body>
-    <div class="w-full flex text-xl pt-4">
+    <div class="w-full flex text-base pt-4" id="navbar">
         <nav class="flex w-full justify-between">
-            <div class="flex mt-4 ml-4">
+            <div class="flex mt-4">
                 <img src="IMG_20220103_220808.png" alt="" id="logo" class="w-12 h-8 mt-1">
                 <p class="pl-2 text-3xl">BEYOND WELKIN</p>
             </div>
             <ul class="flex w-2/3 justify-around">
-                <li class="mt-2"><a href="" class="items"> Home </a></li>
-                <li class="mt-2"><a href="" class="items"> Vision </a></li>
-                <li class="mt-2"><a href="" class="items"> About </a></li>
-                <li class="mt-2"><a href="" class="items">Blogs</a></li>
-                <li class="mt-2"><a href="" class="items"> Contact</a></li>
-                <li class="mt-2"><a href="" class="items"> Donate </a></li>
-                <li class=""><a href="" class="items text-black bg-white p-2 rounded-md hover:bg-black hover:text-white px-3">Join</a></li>
+                <li class="mt-4"><a href="" class="items"> Home </a></li>
+                <li class="mt-4"><a href="vision.html" class="items"> Vision </a></li>
+                <li class="mt-4"><a href="#about" class="items"> About </a></li>
+                <li class="mt-4"><a href="#blogs" class="items">Blogs</a></li>
+                <li class="mt-4"><a href="#contact" class="items"> Contact</a></li>
+                <li class="mt-4"><a href="#home" class="items"> Donate </a></li>
+                <li class="mt-2"><a href="join.html" class="items text-black bg-white p-2 rounded-md hover:bg-black hover:text-white px-3">Join</a></li>
             </ul>
         </nav>
     </div>
