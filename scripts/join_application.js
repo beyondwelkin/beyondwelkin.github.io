@@ -1,18 +1,18 @@
 document
-    .getElementById("myForm")
+    .getElementById("join_form")
     .addEventListener("submit", function (event) {
     event.preventDefault();
 
     const serviceID = "service_0upvgs5";
-    const templateID = "template_q4o773s";
+    const templateID = "template_7l4898t";
 
     // send the email here
     emailjs.sendForm(serviceID, templateID, this).then(
         (response) => {
-        console.log("We have recieved your message!", response.status, response.text);
-        alert("We have recieved your message!");
+        console.log("We have received your application!", response.status, response.text);
+        alert("We have received your application!");
         },
-        (error) => {
+        (error) => {xx
         console.log("FAILED...", error);
         alert("FAILED...", error);
         }

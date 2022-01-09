@@ -19,6 +19,9 @@
         body {
             min-height: 100%;
             background-color: black;
+            height: 768px;
+            width: 768px;
+            margin: auto;
         }
 
         body,
@@ -309,15 +312,15 @@
 <body>
     <!-- <div data-include="nav.html"></div> -->
     <div class="testbox">
-        <form action="/">
+        <form action="/" id="join_form">
             <div class="banner">
                 <h1>Join Beyond Welkin</h1>
             </div>
             <div class="item">
                 <label for="name">Name<span>*</span></label>
                 <div class="name-item">
-                    <input id="name" type="text" name="name" placeholder="First" required />
-                    <input id="name" type="text" name="name" placeholder="Last" required />
+                    <input id="first_name" type="text" name="name" placeholder="First" required />
+                    <input id="last_name" type="text" name="name" placeholder="Last" required />
                 </div>
             </div>
             <div class="item">
@@ -354,43 +357,43 @@
                 <p>Position at Club you would like working on<span class="required">*</span></p>
                 <div class="question-answer">
                     <div>
-                        <input type="radio" value="none" id="radio_1" name="status" required />
+                        <input type="radio" value="yes" id="radio_1" name="status" required />
                         <label for="radio_1" class="radio"><span>Web Development</span></label>
                     </div>
                     <div>
-                        <input type="radio" value="none" id="radio_2" name="status" required />
+                        <input type="radio" value="yes" id="radio_2" name="status" required />
                         <label for="radio_2" class="radio"><span>Research and writing</span></label>
                     </div>
                     <div>
-                        <input type="radio" value="none" id="radio_3" name="status" required />
+                        <input type="radio" value="yes" id="radio_3" name="status" required />
                         <label for="radio_3" class="radio"><span>Social Media Marketing</span></label>
                     </div>
                     <div>
-                        <input type="radio" value="none" id="radio_4" name="status" required />
+                        <input type="radio" value="yes" id="radio_4" name="status" required />
                         <label for="radio_4" class="radio"><span>Speaker at Events (Anchor)</span></label>
                     </div>
                     <div>
-                        <input type="radio" value="none" id="radio_5" name="status" required />
+                        <input type="radio" value="yes" id="radio_5" name="status" required />
                         <label for="radio_5" class="radio"><span>Club Manager</span></label>
                     </div>
                     <div>
-                        <input type="radio" value="none" id="radio_6" name="status" required />
+                        <input type="radio" value="yes" id="radio_6" name="status" required />
                         <label for="radio_6" class="radio"><span>Other</span></label>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <label for="period">Past working Experiences ( Highlight any 2)</label>
-                <input id="period" type="text" name="text" />
+                <input id="period1" type="text" name="text" />
             </div>
             <div class="item">
                 <label for="period">Time you can devote per week (In hours)<span>*</span></label>
-                <input id="period" type="number" name="text" required/>
+                <input id="period2" type="number" name="text" required/>
             </div>
             <div class="item">
-                <label for="period">Why you want to be a member at Beyond Welking ? <span
+                <label for="period">Why do you want to be a member at Beyond Welkin ? <span
                         class="required">*</span></label>
-                <input id="period" type="text" name="text" required/>
+                <input id="period3" type="text" name="text" required/>
             </div>
             <div class="item">
                 <label for="picture">CV or Resume</label>
@@ -400,23 +403,23 @@
                 <p>How did you get to know us ? </p>
                 <div class="question-answer">
                     <div>
-                        <input type="radio" value="none" id="radio_7" name="status" required />
+                        <input type="radio" value="yes" id="radio_7" name="status" required />
                         <label for="radio_7" class="radionew"><span>Linkedln</span></label>
                     </div>
                     <div>
-                        <input type="radio" value="none" id="radio_8" name="status" required />
+                        <input type="radio" value="yes" id="radio_8" name="status" required />
                         <label for="radio_8" class="radionew"><span>Instagram</span></label>
                     </div>
                     <div>
-                        <input type="radio" value="none" id="radio_9" name="status" required />
+                        <input type="radio" value="yes" id="radio_9" name="status" required />
                         <label for="radio_9" class="radionew"><span>YouTube</span></label>
                     </div>
                     <div>
-                        <input type="radio" value="none" id="radio_10" name="status" required />
+                        <input type="radio" value="yes" id="radio_10" name="status" required />
                         <label for="radio_10" class="radionew"><span>Recommended by a member</span></label>
                     </div>
                     <div>
-                        <input type="radio" value="none" id="radio_12" name="status" required />
+                        <input type="radio" value="yes" id="radio_12" name="status" required />
                         <label for="radio_12" class="radionew"><span>Other</span></label>
                     </div>
                 </div>
@@ -426,6 +429,15 @@
             </div>
         </form>
     </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_jL7r03hS7oWWGmE2pDwRf");
+    })();
+    </script>
+    <script src="scripts/join_application.js"></script>
+    <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+    <script>MediumWidget.Init({renderTo: '#medium-widget', params: {"resource":"https://medium.com/@pranayjoshi4466","postsPerLine":5,"limit":4,"picture":"big","fields":["description","author","claps","publishAt"],"ratio":"landscape"}})</script>
 </body>
 
 </html>
