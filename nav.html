@@ -6,12 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayyeye aapko Navbar dikhate h</title>
+    <script src="https://cdn.jsdelivr.net/gh/LexmarkWeb/csi.js@0.1.0/csi.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<script>
+  const hamburger = document.querySelector(".ham");  
+ const navsub = document.querySelector(".nav-sub");  
+ hamburger.addEventListener('click', () => {  
+  hamburger.classList.toggle("change")  
+  navsub.classList.toggle("nav-change")  
+ })
+</script>
 <style>
+ body{
+   background: #000;
+ }
     #navbar {
   overflow: hidden;
 }
-
+p{
+  color: white;
+}
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -64,16 +82,64 @@ a:hover:after {
   width: 100%; 
   left: 0; 
 }
+.ham{  
+  display:none;  
+  padding:5px;  
+  cursor:pointer;  
+ }  
+ .bar1,.bar2,.bar3{  
+  display:block;  
+  width:35px;  
+  height:3px;  
+  margin:5px auto;  
+  background-color:white;  
+  transition: 0.4s;  
+ }
+ @media only screen and (max-width:768px){  
+ *{  
+   overflow:hidden;  
+  }  
+ .nav-sub{  
+   position:absolute;   
+   top:10vh;  
+   right:0px;  
+   flex-direction:column;  
+   background-color:#111827;  
+   border-radius:0px 0px 0px 20px;  
+   transition:transform 0.3s ease-in;  
+   transform:translate(100%);  
+  }  
+ .nav-change{  
+   transform:translate(0%);  
+  }  
+ .ham{  
+   display:block;  
+  }  
+ .change .bar1 {  
+  transform: rotate(45deg) translate(8px,3px);  
+ }  
+ .change .bar2 {  
+  opacity: 0;  
+ }  
+ .change .bar3 {  
+  transform: rotate(-45deg) translate(8px,-3px);  
+ }  
+ }  
 </style>
 
 <body>
     <div class="w-full flex text-base pt-4" id="navbar">
         <nav class="flex w-full justify-between">
+          <div class="ham" >  
+            <span class="bar1"></span>  
+            <span class="bar2"></span>  
+            <span class="bar3"></span>  
+            </div> 
             <div class="flex mt-4">
                 <img src="IMG_20220103_220808.png" alt="" id="logo" class="w-12 h-8 mt-1">
-                <p class="pl-2 text-3xl">BEYOND WELKIN</p>
+                <p class="pl-2 text-3xl" >BEYOND WELKIN</p>
             </div>
-            <ul class="flex w-2/3 justify-around">
+            <ul class="nav-sub flex w-2/3 justify-around">
                 <li class="mt-4"><a href="" class="items"> Home </a></li>
                 <li class="mt-4"><a href="vision.html" class="items"> Vision </a></li>
                 <li class="mt-4"><a href="#about" class="items"> About </a></li>

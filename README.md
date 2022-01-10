@@ -4,7 +4,7 @@ Aerospace Club
 # commands to run
 ## 1. pull
 ```git pull```
-## 2. push
+## git 2. push
 ```git add .```
 
 ```git commit -m "updated" ```
