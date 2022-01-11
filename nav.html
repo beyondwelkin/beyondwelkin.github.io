@@ -12,7 +12,14 @@
     integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
+<script>
+  const hamburger = document.querySelector(".ham");  
+ const navsub = document.querySelector(".nav-sub");  
+ hamburger.addEventListener('click', () => {  
+  hamburger.classList.toggle("change")  
+  navsub.classList.toggle("nav-change")  
+ })
+</script>
 <style>
  body{
    background: #000;
@@ -75,107 +82,75 @@ a:hover:after {
   width: 100%; 
   left: 0; 
 }
-.hamburger {
-    display: none;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: white;
-}
-@media screen and (max-width:768px) {
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 5rem;
-        flex-direction: column;
-        background-color: #111827;
-        width: 100%;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow:
-            0 10px 27px rgba(0, 0, 0, 0.05);
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-item {
-        margin: 2.5rem 0;
-    }
-
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-    
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-}
+.ham{  
+  display:none;  
+  padding:5px;  
+  cursor:pointer;  
+ }  
+ .bar1,.bar2,.bar3{  
+  display:block;  
+  width:35px;  
+  height:3px;  
+  margin:5px auto;  
+  background-color:white;  
+  transition: 0.4s;  
+ }
+ @media only screen and (max-width:768px){  
+ *{  
+   overflow:hidden;  
+  }  
+ .nav-sub{  
+   position:absolute;   
+   top:10vh;  
+   right:0px;  
+   flex-direction:column;  
+   background-color:#111827;  
+   border-radius:0px 0px 0px 20px;  
+   transition:transform 0.3s ease-in;  
+   transform:translate(100%);  
+  }  
+ .nav-change{  
+   transform:translate(0%);  
+  }  
+ .ham{  
+   display:block;  
+  }  
+ .change .bar1 {  
+  transform: rotate(45deg) translate(8px,3px);  
+ }  
+ .change .bar2 {  
+  opacity: 0;  
+ }  
+ .change .bar3 {  
+  transform: rotate(-45deg) translate(8px,-3px);  
+ }  
+}  
 </style>
 
 <body>
     <div class="w-full flex text-base pt-4" id="navbar">
-        <nav class=" flex w-full justify-between">
+        <nav class="flex w-full justify-between">
+          <div class="ham" >  
+            <span class="bar1"></span>  
+            <span class="bar2"></span>  
+            <span class="bar3"></span>  
+            </div> 
             <div class="flex mt-4">
                 <img src="IMG_20220103_220808.png" alt="" id="logo" class="w-12 h-8 mt-1">
                 <p class="pl-2 text-3xl" >BEYOND WELKIN</p>
             </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-menu flex w-2/3 justify-around">
-                <li class="nav-item mt-4"><a href="" class="items"> Home </a></li>
-                <li class="nav-item mt-4"><a href="vision.html" class="items"> Vision </a></li>
-                <li class="nav-item mt-4"><a href="#about" class="items"> About </a></li>
-                <li class="nav-item mt-4"><a href="#blogs" class="items">Blogs</a></li>
-                <li class="nav-item mt-4"><a href="#contact" class="items"> Contact</a></li>
-                <li class="nav-item mt-4"><a href="#home" class="items"> Donate </a></li>
-                <li class="nav-item mt-2"><a href="join.html" class="items text-black bg-white p-2 rounded-md hover:bg-black hover:text-white px-3">Join</a></li>
+            <ul class="nav-sub flex w-2/3 justify-around">
+                <li class="mt-4"><a href="" class="items"> Home </a></li>
+                <li class="mt-4"><a href="#vision" class="items"> Vision </a></li>
+                <li class="mt-4"><a href="#about" class="items"> About </a></li>
+                <li class="mt-4"><a href="#blogs" class="items">Blogs</a></li>
+                <li class="mt-4"><a href="#contact" class="items"> Contact</a></li>
+                <li class="mt-4"><a href="#home" class="items"> Donate </a></li>
+                <li class="mt-2"><a href="join.html" class="items text-black bg-white p-2 rounded-md hover:bg-black hover:text-white px-3">Join</a></li>
             </ul>
-
         </nav>
     </div>
    
 </body>
-<script>
-    const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
 
-hamburger.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-}
-
-// now closing it when clicked
-const navLink = document.querySelectorAll(".nav-link");
-
-navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}
-</script>
 </html>

@@ -15,15 +15,16 @@
 </head>
 
 <body>
-    <div data-include="nav.html"></div>
-    <section id="home" class="my-20">
-            <div class="flex text-center">
+    <div class="res"><div data-include="nav.html" ></div></div>
+    <section id="home" class="my-20 w-full h-full align-items-middle d" style="">
+            <div class="flex text-center align-middle">
                 <div class="z-0 my-auto mx-auto">
                     <h1 class="font-bold" style="font-size: 80px;">Beyond Welkin</h1>
                     <h2 class="font-semibold pt-2" style="font-size: 40px;">"Lorem ipsum dolor sit amet <br>consectetur adipisicing elit."</h1>
                 </div>  
             </div>
     </section>
+    <div class="res">
     <section id="vision" class="my-20">
         <div class="flex">
             <div class="ml-10 w-full lg:w-1/2">
@@ -46,7 +47,7 @@
     <section id="contact" class="my-20">
         <p class="text-white underline mx-auto w-full text-center" style="font-size: 78px;">Contact Us</p>
         <div class="md:m-2 m-6 flex mr-auto text-left">
-            <div class="w-full  mr-auto">
+            <div class="w-full mr-auto">
                 <div>
                     <form class="w-full max-w-lg ml-6" id="myForm">
                         <div class="flex flex-wrap -mx-3 mb-6">
@@ -85,25 +86,31 @@
                       </form>
                     </div>
             </div>
-            <button class="text-black bg-white p-2 rounded-md hover:bg-black hover:text-white px-3 text-lg"
-              type="submit">Send</button>
           </form>
+          <lottie-player class="hidden lg:block" src="https://assets6.lottiefiles.com/packages/lf20_Ns4TLz.json"
+        background="transparent" speed="1" style="width: 450px; height: 500px;" loop autoplay></lottie-player>
         </div>
       </div>
-      <lottie-player class="hidden lg:block" src="https://assets6.lottiefiles.com/packages/lf20_Ns4TLz.json"
-        background="transparent" speed="1" style="width: 450px; height: 500px;" loop autoplay></lottie-player>
+    
     </div>
   </section>
-
+    </div>
   <style>
     iframe[seamless] {
       border: none;
     }
-
+    .d{
+        width: 1920px;
+        margin-left: 0;
+        height: 768px;
+        background: url('./minimalism-1641823974329-5756.jpeg') no-repeat center center fixed; width: 1920px;
+    }
     body {
       background-color: #000000;
       color: white;
-      height: 768px;
+    }
+    .res {
+        height: 768px;
       width: 1024px;
       margin: auto;
     }
@@ -149,6 +156,11 @@
       border-width: 5px;
 
     }
+    .carousel{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+}
   </style>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
