@@ -5,12 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join us form </title>
-    <!-- <script src="https://cdn.jsdelivr.net/gh/LexmarkWeb/csi.js@0.1.0/csi.min.js"></script> -->
-
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
-        integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <title>Join us</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -19,11 +14,6 @@
         body {
             min-height: 100%;
             background-color: black;
-            /* height: 768px; */
-            /* width: 768px; */
-            width: 768px;
-            /* text-align: center; */
-            /* margin: auto; */
         }
 
         body,
@@ -59,7 +49,7 @@
 
         form {
             margin-top: 30px;
-            width: 100%;
+            width: 768px;
             padding: 20px;
             border-radius: 6px;
             background: #111827;
@@ -237,7 +227,7 @@
             width: 150px;
             padding: 10px;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             background: black;
             font-size: 16px;
             color: #fff;
@@ -312,28 +302,27 @@
 </head>
 
 <body>
-    <!-- <div data-include="nav.html"></div> -->
     <div class="testbox">
         <form action="/" id="join_form">
             <div class="banner">
                 <h1>Join Beyond Welkin</h1>
             </div>
             <div class="item">
-                <label for="name">Name<span>*</span></label>
+                <label for="name">Name <span>*</span></label>
                 <div class="name-item">
                     <input id="first_name" type="text" name="name" placeholder="First" required />
                     <input id="last_name" type="text" name="name" placeholder="Last" required />
                 </div>
             </div>
             <div class="item">
-                <label for="bdate">Date of Birth<span>*</span></label>
+                <label for="bdate">Date of Birth <span>*</span></label>
                 <input id="bdate" type="date" name="bdate" required />
                 <i class="fas fa-calendar-alt"></i>
             </div>
             <div class="item">
                 <div class="name-item">
                     <div>
-                        <label for="address">Email Address<span class="required">*</span></label>
+                        <label for="address">Email Address <span class="required">*</span></label>
                         <input id="address" type="text" name="address" required />
                     </div>
                     <div>
@@ -345,18 +334,18 @@
             <div class="item">
                 <div class="name-item">
                     <div>
-                        <label for="language">Age<span class="required">*</span></label>
+                        <label for="language">Age <span class="required">*</span></label>
                         <input id="age" type="number" name="age" required/>
                     </div>
                     <div>
-                        <label for="nationality">State<span class="required">*</span></label>
+                        <label for="nationality">State <span class="required">*</span></label>
                         <input id="state" type="text" name="state" required/>
                     </div>
                 </div>
             </div>
 
             <div class="question">
-                <p>Position at Club you would like working on<span class="required">*</span></p>
+                <p>Position at Club you would like working on <span class="required">*</span></p>
                 <div class="question-answer">
                     <div>
                         <input type="radio" value="yes" id="radio_1" name="radio_1" required />
@@ -389,7 +378,7 @@
                 <input id="period1" type="text" name="text" />
             </div>
             <div class="item">
-                <label for="period">Time you can devote per week (In hours)<span>*</span></label>
+                <label for="period">Time you can devote per week (In hours) <span>*</span></label>
                 <input id="period2" type="number" name="text" required/>
             </div>
             <div class="item">
