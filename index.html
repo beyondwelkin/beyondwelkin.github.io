@@ -15,37 +15,40 @@
 </head>
 
 <body>
-    <div class="res"><div data-include="nav.html" ></div></div>
-    <section id="home" class="my-20 w-full h-full align-items-middle d" style="">
-            <div class="flex text-center align-middle">
+    <section id="home" class="my-5 w-full h-full home-sec">
+        <div class="res">
+            <div data-include="nav.html" ></div>
+        </div>
+            <div class="flex text-center h-full m-auto w-full">
                 <div class="z-0 my-auto mx-auto">
                     <h1 class="font-bold" style="font-size: 80px;">Beyond Welkin</h1>
-                    <h2 class="font-semibold pt-2" style="font-size: 40px;">"Lorem ipsum dolor sit amet <br>consectetur adipisicing elit."</h1>
+                    <h2 class="font-semibold pt-2" style="font-size: 30px;">"Lorem ipsum dolor sit amet <br>consectetur adipisicing elit."</h1>
                 </div>  
             </div>
     </section>
-    <div class="res">
+    <div class="res sm:res-mob">
     <section id="vision" class="my-20">
         <div class="flex">
-            <div class="ml-10 w-full lg:w-1/2">
-                <h2 class="text-4xl font-semibold">Vision</h2>
-                <p class="ml-10">Our motivation for creating the club was the unavailability of opportunities and resources in the field of aerospace in India.
+            <div class="ml-10 lg:w-1/2">
+                <h2 class="text-4xl font-semibold underline">Vision</h2>
+                <p class="ml-10 text-xl mt-10">Our motivation for creating the club was the unavailability of opportunities and resources in the field of aerospace in India.
                      We sincerely hope that Beyond Welkin will help us bring a change and provide equal opportunities to people without any financial or social barriers.</p>
             </div>
             <lottie-player class="hidden lg:block" src="https://assets6.lottiefiles.com/packages/lf20_l4ny0jjm.json" background="transparent"  speed="1"  style="width: 600px; height: 600px;" loop autoplay></lottie-player>
             
         </div>
     </section>
+    <div class="res">
     <section class="my-20" id ="blogs">
-        <p class="text-white underline mx-auto w-full text-center" style="font-size: 78px;">Blogs</p>
-        <div id="medium-widget" class="text-white m-4"></div>
-    </section>
+        <p class="text-white underline mx-auto w-full text-center text-4xl">Blogs</p>
+        <div id="medium-widget" class="res text-white m-4"></div>
+    </section></div>
     <section id ="about" class="my-20">
-        <p class="text-white underline mx-auto w-full text-center" style="font-size: 78px;">Our Team</p>
+        <p class="text-white underline mx-auto w-full text-center text-4xl">Our Team</p>
         <div data-include="About.html"></div>
     </section>
     <section id="contact" class="my-20">
-        <p class="text-white underline mx-auto w-full text-center" style="font-size: 78px;">Contact Us</p>
+        <p class="text-white underline mx-auto w-full text-center text-4xl">Contact Us</p>
         <div class="md:m-2 m-6 flex mr-auto text-left">
             <div class="w-full mr-auto">
                 <div>
@@ -99,32 +102,34 @@
     iframe[seamless] {
       border: none;
     }
-    .d{
-        width: 1920px;
+    .home-sec{
         margin-left: 0;
         height: 768px;
-        background: url('./minimalism-1641823974329-5756.jpeg') no-repeat center center fixed; width: 1920px;
+        background: url('./minimalism-1641823974329-5756.jpeg') no-repeat center center fixed;
     }
     body {
       background-color: #000000;
       color: white;
     }
     .res {
-        height: 768px;
       width: 1024px;
       margin: auto;
     }
-
+    .res-mob {
+        width: 100%;
+      margin: auto;
+    }
     .medium-widget-article__title {
       color: #fff;
-      padding: 5px;
+      font-size: 32px;
+      padding-bottom: 30px;
+      line-height: 40px;
     }
 
     .medium-widget-article__description {
       color: rgb(150, 147, 147);
-      padding: 5px;
       padding-bottom: 30px;
-      font-size: 16px;
+      font-size: 22px;
     }
 
     .medium-widget-article__title:active {
@@ -137,6 +142,7 @@
 
     .medium-widget-article__author-name {
       color: rgb(150, 147, 147);
+      font-size: 22px;
     }
 
     .medium-widget-article__clap {
@@ -145,6 +151,7 @@
 
     .medium-widget-article__date {
       color: rgb(150, 147, 147);
+      font-size: 22px;
     }
 
     .medium-widget-article__column {
@@ -154,7 +161,14 @@
       border-radius: 10px;
       border-style: solid;
       border-width: 5px;
+      width: 450px;
+      overflow: auto;
+      height: 400px;
 
+    }
+    .medium-widget-article__avatar-picture {
+        width: 80px;
+        height: 40px;
     }
     .carousel{
   max-width: 1200px;
@@ -170,7 +184,7 @@
   </script>
   <script src="scripts/contact.js"></script>
   <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
-  <script>MediumWidget.Init({ renderTo: '#medium-widget', params: { "resource": "https://medium.com/@pranayjoshi4466", "postsPerLine": 5, "limit": 4, "picture": "big", "fields": ["description", "author", "claps", "publishAt"], "ratio": "landscape" } })</script>
+  <script>MediumWidget.Init({ renderTo: '#medium-widget', params: { "resource": "https://medium.com/@pranayjoshi4466", "postsPerLine": 3, "limit": 100, "picture": "big", "fields": ["description", "author", "claps", "publishAt"], "ratio": "landscape" } })</script>
 </body>
 
 </html>
