@@ -12,12 +12,40 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
     integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
 </head>
-
-<body>
-    <section id="home" class="my-5 w-full h-full ">
-        <div class="res">
-            <div data-include="nav.html" ></div>
+<style>
+    .res {
+      width: 1024px;
+      margin: auto;
+    }
+</style>
+<body class="g lg:w-[1024px]">
+    <section id="home" class="my-5 w-full h-full">
+        <div class="">
+            <div class="w-full flex text-base pt-4" id="navbar">
+                <nav class=" flex w-full justify-between">
+                    <div class="flex mt-4">
+                        <img src="IMG_20220103_220808.png" alt="" id="logo" class="w-12 h-8 mt-1">
+                        <p class="pl-2 text-3xl" >BEYOND WELKIN</p>
+                    </div>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul class="nav-menu flex w-2/3 justify-around z-10">
+                        <li class="nav-item mt-4"><a href="" class="items"> Home </a></li>
+                        <li class="nav-item mt-4"><a href="vision.html" class="items"> Vision </a></li>
+                        <li class="nav-item mt-4"><a href="#about" class="items"> About </a></li>
+                        <li class="nav-item mt-4"><a href="#blogs" class="items">Blogs</a></li>
+                        <li class="nav-item mt-4"><a href="#contact" class="items"> Contact</a></li>
+                        <li class="nav-item mt-4"><a href="#home" class="items"> Donate </a></li>
+                        <li class="nav-item mt-2"><a href="join.html" class="items text-black bg-white p-2 rounded-md hover:bg-black hover:text-white px-3">Join</a></li>
+                    </ul>
+        
+                </nav>
+            </div>
         </div>
             <div class="flex text-center h-full m-auto w-full mb-10 home-sec">
                 <div class="z-0 my-auto mx-auto">
@@ -26,21 +54,21 @@
                 </div>  
             </div>
     </section>
-    <div class="res sm:res-mob">
+    <div class="">
     <section id="vision" class="my-20">
         <div class="flex">
-            <div class="ml-10 lg:w-1/2">
-                <h2 class="text-4xl font-semibold underline">Vision</h2>
+            <div class="ml-10 lg:w-1/2 mx-auto w-auto">
+                <h2 class="font-semibold underline" style="font-size: 45px;">Vision</h2>
                 <p class="ml-10 text-xl mt-10">Our motivation for creating the club was the unavailability of opportunities and resources in the field of aerospace in India.
                      We sincerely hope that Beyond Welkin will help us bring a change and provide equal opportunities to people without any financial or social barriers.</p>
             </div>
-            <lottie-player class="hidden lg:block" src="https://assets6.lottiefiles.com/packages/lf20_l4ny0jjm.json" background="transparent"  speed="1"  style="width: 600px; height: 600px;" loop autoplay></lottie-player>
+            <lottie-player class="hidden lg:block" src="https://assets6.lottiefiles.com/packages/lf20_l4ny0jjm.json" background="transparent"  speed="1"  style="width: 600px; height: 500px;" loop autoplay></lottie-player>
             
         </div>
     </section>
     <section class="my-20" id ="blogs">
         <p class="text-white underline mx-auto w-full text-center text-4xl">Blogs</p>
-        <div id="medium-widget" class="res text-white m-4"></div>
+        <div id="medium-widget" class="text-white m-4"></div>
     </section>
     <section id ="about" class="my-20">
         <p class="text-white underline mx-auto w-full text-center text-4xl">Our Team</p>
@@ -49,15 +77,14 @@
     <section id="contact" class="my-20">
         <p class="text-white underline mx-auto w-full text-center text-4xl">Contact Us</p>
         <div class="md:m-2 m-6 flex text-left">
-            <div class="w-1/2 mx-6">
-                <div>
-                    <form class="w-full max-w-lg" id="myForm">
+            <div class="w-full">
+                    <form class="w-full " id="myForm">
                         <div class="flex flex-wrap -mx-3 mb-6">
                           <div class="w-full px-3 mb-6 md:mb-0">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
                               First Name
                             </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="name" id="name" type="text">
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded sm:py-1 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="name" id="name" type="text">
                           </div>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-6">
@@ -65,7 +92,7 @@
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
                               Subject
                             </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="subject" id="subject" type="text">
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded sm:py-1 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="subject" id="subject" type="text">
                           </div>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-6">
@@ -73,7 +100,7 @@
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
                               E-mail
                             </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" name="email" type="email">
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded sm:py-1 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" name="email" type="email">
                           </div>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-6">
@@ -81,20 +108,22 @@
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="content">
                               Message
                             </label>
-                            <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message" name="message"></textarea>
+                            <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded sm:py-1 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message" name="message"></textarea>
                           </div>
                         </div>
                         <button class="text-black bg-white p-2 rounded-md hover:bg-black hover:text-white px-3 text-lg" type="submit">Send</button>
                       </form>
                     </div>
-                </div>
-          </form>
-          <lottie-player class="hidden lg:block mx-6" src="https://assets6.lottiefiles.com/packages/lf20_Ns4TLz.json"
+                    <lottie-player class="hidden lg:block mx-6" src="https://assets6.lottiefiles.com/packages/lf20_Ns4TLz.json"
         background="transparent" speed="1" style="width: 450px; height: 500px;" loop autoplay></lottie-player>
+          </form>
         </div>
   </section>
     </div>
   <style>
+    .g{
+        color: rgb(255, 255, 255);
+    }
     iframe[seamless] {
       border: none;
     }
@@ -106,13 +135,6 @@
     body {
       background-color: #000000;
       color: white;
-    }
-    .res {
-      width: 1024px;
-      margin: auto;
-    }
-    .res-mob {
-        width: 100%;
       margin: auto;
     }
     .medium-widget-article__title {
@@ -171,6 +193,118 @@
   margin: auto;
   padding: 0 30px;
 }
+#navbar {
+  overflow: hidden;
+}
+p{
+  color: white;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar li {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  padding: 15px;
+}
+
+    ul { 
+  margin:  auto 0; 
+  padding: 0; 
+  list-style: none; 
+  display: table;
+  width: 600px;
+  text-align: center;
+}
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+  position: relative;
+}
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+@media screen and (max-width:768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #111827;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
   </style>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
@@ -181,6 +315,27 @@
   <script src="scripts/contact.js"></script>
   <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
   <script>MediumWidget.Init({ renderTo: '#medium-widget', params: { "resource": "https://medium.com/@pranayjoshi4466", "postsPerLine": 3, "limit": 100, "picture": "big", "fields": ["description", "author", "claps", "publishAt"], "ratio": "landscape" } })</script>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+// now closing it when clicked
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+</script>
 </body>
 
 </html>
