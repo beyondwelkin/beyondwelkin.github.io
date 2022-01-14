@@ -271,12 +271,12 @@
   .home-sec{
       margin-left: 0;
       height: 768px;
-      background: url('./space-1451654.png') no-repeat center center fixed;
   }
   body {
     background-color: #000000;
     color: white;
     margin: auto;
+    background: url('./space-1451654.png') no-repeat center center fixed;
   }
   .medium-widget-article__title {
     color: #fff;
