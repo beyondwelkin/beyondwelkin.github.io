@@ -211,7 +211,7 @@ function closeMenu() {
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script src="scripts/donate.js"></script>
 <script type="text/javascript">
-    $(document).ready(function(){
+    setTimeout(function(){
         $('.medium-widget-article__row').slick({
   slidesToScroll: 1,
   autoplay: true,
@@ -233,7 +233,7 @@ function closeMenu() {
     },
   ]
 });
-    });
+    }, 1000);
   </script>
 <script type="text/javascript">
         $('.about-wrapper').slick({
