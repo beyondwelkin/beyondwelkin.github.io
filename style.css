@@ -220,7 +220,13 @@
       transition: all 0.3s ease-in-out;
       background-color: white;
   }
+  .g{
+      width: 1024px;
+  }
   @media screen and (max-width:768px) {
+      .g{
+          width: 100%;
+      }
       .nav-menu {
           position: fixed;
           left: -100%;

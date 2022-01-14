@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
     integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
 </head>
 <style>
     .res {
@@ -20,7 +19,7 @@
       margin: auto;
     }
 </style>
-<body class="g lg:w-[1024px]">
+<body class="g">
     <section id="home" class="my-5 w-full h-full">
         <div class="">
             <div class="w-full flex text-base pt-4" id="navbar">
@@ -68,14 +67,14 @@
         </div>
     </section>
     <section class="my-20 lg:my-30" id ="blogs">
-        <p class="text-white mx-auto w-full text-center text-[45px]">Blogs</p>
+        <p class="text-white mx-auto w-full text-center" style="font-size: 45px;">Blogs</p>
         <div class="w-auto">
             <div class="h-1 mx-auto  w-64 my-0 py-0 rounded-t" style="background-color: #59C9E6;"></div>
         </div>
         <div id="medium-widget" class="text-white m-4"></div>
     </section>
     <section id ="about" class="my-20 lg:my-30">
-        <p class="text-white mx-auto w-full text-center text-[45px]">Our Team</p>
+        <p class="text-white mx-auto w-full text-center" style="font-size: 45px;">Our Team</p>
         <div class="w-auto">
             <div class="h-1 mx-auto  w-64 my-0 py-0 rounded-t" style="background-color: #59C9E6;"></div>
         </div>
@@ -127,7 +126,7 @@
         </div>
     </section>
     <section id="contact" class="my-20 lg:my-30">
-        <p class="text-white mx-auto w-full text-center text-[45px]">Contact Us</p>
+        <p class="text-white mx-auto w-full text-center" style="font-size: 45px;">Contact Us</p>
         <div class="w-auto">
             <div class="h-1 mx-auto  w-64 my-0 py-0 rounded-t" style="background-color: #59C9E6;"></div>
         </div>
@@ -246,6 +245,16 @@ function closeMenu() {
     arrows: true,
     margin:5,
   responsive:[
+  {
+      breakpoint: 1000,
+      settings: {
+        arrows: true,
+        autoplay: true,
+        margin:10,
+        autoplaySpeed: 2000,
+        slidesToShow: 4
+      }
+    },
     {
       breakpoint: 769,
       settings: {
@@ -253,7 +262,7 @@ function closeMenu() {
         autoplay: true,
         margin:10,
         autoplaySpeed: 2000,
-        slidesToShow: 4
+        slidesToShow: 3
       }
     },
   ]
