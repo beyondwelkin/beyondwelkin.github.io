@@ -1,11 +1,11 @@
 var options = {
-    "key": "rzp_live_o4IccI7XzfPv4c", // Enter the Key ID generated from the Dashboard
-    "amount": "200", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "key": "rzp_live_Qy74wdzDlM2G8W", // Enter the Key ID generated from the Dashboard
+    "amount": "20000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
     "currency": "INR",
-    "name": "Acme Corp",
-    "description": "Beyond Welkin Donation",
+    "name": "Beyond Welkin",
+    "description": "Donation",
     "image": "IMG_20220103_220808.png",
-    "order_id": "order_Ii1wQ7dmnnor2J", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "order_id": "order_IjcGABxju2rbhj", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
     "handler": function (response){
         alert(response.razorpay_payment_id);
         alert(response.razorpay_order_id);
@@ -33,7 +33,7 @@ rzp1.on('payment.failed', function (response){
         alert(response.error.metadata.order_id);
         alert(response.error.metadata.payment_id);
 });
-document.getElementById('donate').onclick = function(e){
+document.getElementById('rzp-button1').onclick = function(e){
     rzp1.open();
     e.preventDefault();
 }
