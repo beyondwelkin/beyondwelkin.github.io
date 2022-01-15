@@ -78,7 +78,7 @@
         <div class="w-auto">
             <div class="h-1 mx-auto  w-64 my-0 py-0 rounded-t" style="background-color: #59C9E6;"></div>
         </div>
-        <div class="carousel-wrap mx-8 md:mx-12 lg:mx-0">
+        <div class="carousel-wrap mx-6 md:mx-12 lg:mx-0">
             <div class=" lg:flex px-6 pt-2 text-center about-wrapper md:px-0">
               <div class=" m-5 sm:m-2 bg-black lg:w-1/3 rounded-lg py-5 shadow-lg border-2 border-bg-white px-6 neon-card" style="width: 200px;">
                 <img src="billie.jpg" alt="Billie"  class="h-36 w-36 rounded-full mx-auto border-4 border-gray-300 " >
@@ -104,7 +104,7 @@
               <div class=" m-5 sm:m-2 bg-black lg:w-1/3 rounded-lg py-5 shadow-lg border-2 border-bg-white px-6 neon-card" style="width: 200px;">
                 <img src="about_pictures/pourush.jpeg" alt="Billie"  class="h-36 w-36 rounded-full mx-auto border-4 border-gray-300 " >
                 <div class="">
-                  <h4 class="text-xl font-semibold pt-4 pb-2 ">POURUSH KUMAR</h4>
+                  <h4 class="text-xl font-semibold pt-4 pb-2 ">POURUSH K.</h4>
                   <h4 class="text-lg text-gray-200 pb-2 ">RESEARCH LEAD</h4>
                 </div>
               </div>
@@ -234,6 +234,31 @@ function closeMenu() {
   ]
 });
     }, 2000);
+  </script>
+  <script type="text/javascript">
+    setTimeout(function(){
+        $('.medium-widget-article__row').slick({
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  slidesToShow: 1,
+    mobileFirst: true,
+    arrows: false,
+    margin:10,
+  responsive:[
+    {
+      breakpoint: 769,
+      settings: {
+        arrows: true,
+        autoplay: true,
+        margin:10,
+        autoplaySpeed: 2000,
+        slidesToShow: 2
+      }
+    },
+  ]
+});
+    }, 5000);
   </script>
 <script type="text/javascript">
         $('.about-wrapper').slick({
