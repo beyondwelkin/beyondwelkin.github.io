@@ -181,6 +181,27 @@
   <script src="scripts/contact.js"></script>
   <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
   <script>MediumWidget.Init({ renderTo: '#medium-widget', params: { "resource": "https://medium.com/@pranayjoshi4466", "postsPerLine": 3, "limit": 100, "picture": "big", "fields": ["description", "author", "claps", "publishAt"], "ratio": "landscape" } })</script>
+  
 </body>
+<script>
+  const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
+
+// now closing it when clicked
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}
+</script>
 </html>
