@@ -13,11 +13,37 @@
     integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
-<body>
-    <section id="home" class="my-5 w-full h-full ">
-        <div class="res">
-            <div data-include="nav.html" ></div>
+<style>
+    .res {
+      width: 1024px;
+      margin: auto;
+    }
+</style>
+<body class="g">
+    <section id="home" class="my-5 w-full h-full">
+        <div class="">
+            <div class="w-full flex text-base pt-4" id="navbar">
+                <nav class=" flex w-full justify-between">
+                    <div class="flex lg:mt-2">
+                        <img src="IMG_20220103_220808.png" alt="" id="logo" class="w-12 h-8 mt-1">
+                        <p class="pl-2 text-3xl" >BEYOND WELKIN</p>
+                    </div>
+                    <div class="hamburger mx-2">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul class="nav-menu flex w-2/3 justify-around z-10">
+                        <li class="nav-item mt-4"><a href="" class="items"> Home </a></li>
+                        <li class="nav-item mt-4"><a href="#vision" class="items"> Vision </a></li>
+                        <li class="nav-item mt-4"><a href="#about" class="items"> About </a></li>
+                        <li class="nav-item mt-4"><a href="#blogs" class="items">Blogs</a></li>
+                        <li class="nav-item mt-4"><a href="#contact" class="items"> Contact</a></li>
+                        <li class="nav-item mt-1"><a href="join.html" class="px-4 py-2 rounded-md text-lg border border-white" >Join</a></li>
+                    </ul>
+        
+                </nav>
+            </div>
         </div>
             <div class="flex text-center h-full m-auto w-full mb-10 home-sec">
                 <div class="z-0 my-auto mx-auto">
@@ -26,38 +52,93 @@
                 </div>  
             </div>
     </section>
-    <div class="res sm:res-mob">
-    <section id="vision" class="my-20">
+    <section id="vision" class="mb-20 lg:mb-30">
         <div class="flex">
-            <div class="ml-10 lg:w-1/2">
-                <h2 class="text-4xl font-semibold underline">Vision</h2>
-                <p class="ml-10 text-xl mt-10">Our motivation for creating the club was the unavailability of opportunities and resources in the field of aerospace in India.
-                     We sincerely hope that Beyond Welkin will help us bring a change and provide equal opportunities to people without any financial or social barriers.</p>
+            <div class="lg:w-1/2 mx-auto w-auto">
+                <h2 class="font-semibold text-center lg:text-left" style="font-size: 45px;">VISION</h2>
+                <div class="mx-10 text-xl mt-10">
+                    <p >Our motivation for creating the club was the unavailability of opportunities and resources in the field of aerospace in India.
+                        We sincerely hope that Beyond Welkin will help us bring a change and provide equal opportunities to people without any financial or social barriers.</p>
+                   <div class="mt-10 text-center"><button id="rzp-button1" class="neon-button" >Donate</button></div>
+                </div>
             </div>
-            <lottie-player class="hidden lg:block" src="https://assets6.lottiefiles.com/packages/lf20_l4ny0jjm.json" background="transparent"  speed="1"  style="width: 600px; height: 600px;" loop autoplay></lottie-player>
+            <lottie-player class="hidden lg:block" src="https://assets6.lottiefiles.com/packages/lf20_l4ny0jjm.json" background="transparent"  speed="1"  style="width: 600px; height: 500px;" loop autoplay></lottie-player>
             
         </div>
     </section>
-    <section class="my-20" id ="blogs">
-        <p class="text-white underline mx-auto w-full text-center text-4xl">Blogs</p>
-        <div id="medium-widget" class="res text-white m-4"></div>
+    <section class="my-20 lg:my-30" id ="blogs">
+        <p class="text-white mx-auto w-full text-center" style="font-size: 45px;">Blogs</p>
+        <div class="w-auto">
+            <div class="h-1 mx-auto  w-64 my-0 py-0 rounded-t" style="background-color: #59C9E6;"></div>
+        </div>
+        <div id="medium-widget" class="text-white m-4"></div>
     </section>
-    <section id ="about" class="my-20">
-        <p class="text-white underline mx-auto w-full text-center text-4xl">Our Team</p>
-        <div data-include="About.html"></div>
+    <section id ="about" class="my-20 lg:my-30">
+        <p class="text-white mx-auto w-full text-center" style="font-size: 45px;">Our Team</p>
+        <div class="w-auto">
+            <div class="h-1 mx-auto  w-64 my-0 py-0 rounded-t" style="background-color: #59C9E6;"></div>
+        </div>
+        <div class="carousel-wrap mx-16 lg:mx-0">
+            <div class=" lg:flex px-6 pt-2 text-center about-wrapper">
+              <div class=" m-5 sm:m-2 bg-black lg:w-1/3 rounded-lg py-5 shadow-lg border-2 border-bg-white px-6 neon-card" style="width: 200px;">
+                <img src="billie.jpg" alt="Billie"  class="h-36 w-36 rounded-full mx-auto border-4 border-gray-300 " >
+                <div class="">
+                  <h4 class="text-xl font-semibold pt-4 pb-2 ">Billie Eilish</h4>
+                  <h4 class="text-lg text-gray-200 pb-2 ">xyz</h4>
+                </div>
+              </div>
+              <div class=" m-5 sm:m-2 bg-black lg:w-1/3 rounded-lg py-5 shadow-lg border-2 border-bg-white px-6 neon-card" style="width: 200px;">
+                <img src="billie.jpg" alt="Billie"  class="h-36 w-36 mx-auto rounded-full  border-4 border-gray-300" >
+                <div class="">
+                  <h4 class="text-xl font-semibold pt-4 pb-2 ">Billie Eilish</h4>
+                  <h4 class="text-lg text-gray-200 pb-2 ">xyz</h4>
+                </div>
+              </div>
+              <div class=" m-5 sm:m-2 bg-black lg:w-1/3 rounded-lg py-5 shadow-lg border-2 border-bg-white px-6 neon-card" style="width: 200px;">
+                <img src="billie.jpg" alt="Billie"  class="h-36 w-36 rounded-full mx-auto border-4 border-gray-300 " >
+                <div class="">
+                  <h4 class="text-xl font-semibold pt-4 pb-2 ">Billie Eilish</h4>
+                  <h4 class="text-lg text-gray-200 pb-2 ">xyz</h4>
+                </div>
+              </div>
+              <div class=" m-5 sm:m-2 bg-black lg:w-1/3 rounded-lg py-5 shadow-lg border-2 border-bg-white px-6 neon-card" style="width: 200px;">
+                <img src="billie.jpg" alt="Billie"  class="h-36 w-36 rounded-full mx-auto border-4 border-gray-300 " >
+                <div class="">
+                  <h4 class="text-xl font-semibold pt-4 pb-2 ">Billie Eilish</h4>
+                  <h4 class="text-lg text-gray-200 pb-2 ">xyz</h4>
+                </div>
+              </div>
+              <div class=" m-5 sm:m-2 bg-black lg:w-1/3 rounded-lg py-5 shadow-lg border-2 border-bg-white px-6 neon-card" style="width: 200px;">
+                <img src="billie.jpg" alt="Billie"  class="h-36 w-36 rounded-full mx-auto border-4 border-gray-300 " >
+                <div class="">
+                  <h4 class="text-xl font-semibold pt-4 pb-2 ">Billie Eilish</h4>
+                  <h4 class="text-lg text-gray-200 pb-2 ">xyz</h4>
+                </div>
+              </div>
+              <div class=" m-5 sm:m-2 bg-black lg:w-1/3 rounded-lg py-5 shadow-lg border-2 border-bg-white px-6 neon-card" style="width: 200px;">
+                <img src="billie.jpg" alt="Billie"  class="h-36 w-36 rounded-full mx-auto border-4 border-gray-300 " >
+                <div class="">
+                  <h4 class="text-xl font-semibold pt-4 pb-2 ">Billie Eilish</h4>
+                  <h4 class="text-lg text-gray-200 pb-2 ">xyz</h4>
+                </div>
+              </div>
+          </div>
+        </div>
     </section>
-    <section id="contact" class="my-20">
-        <p class="text-white underline mx-auto w-full text-center text-4xl">Contact Us</p>
+    <section id="contact" class="my-20 lg:my-30">
+        <p class="text-white mx-auto w-full text-center" style="font-size: 45px;">Contact Us</p>
+        <div class="w-auto">
+            <div class="h-1 mx-auto  w-64 my-0 py-0 rounded-t" style="background-color: #59C9E6;"></div>
+        </div>
         <div class="md:m-2 m-6 flex text-left">
-            <div class="w-1/2 mx-6">
-                <div>
-                    <form class="w-full max-w-lg" id="myForm">
+            <div class="w-full">
+                    <form class="lg:w-4/5" id="myForm">
                         <div class="flex flex-wrap -mx-3 mb-6">
                           <div class="w-full px-3 mb-6 md:mb-0">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
                               First Name
                             </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="name" id="name" type="text">
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded sm:py-1 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="name" id="name" type="text">
                           </div>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-6">
@@ -65,7 +146,7 @@
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
                               Subject
                             </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="subject" id="subject" type="text">
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded sm:py-1 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="subject" id="subject" type="text">
                           </div>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-6">
@@ -73,7 +154,7 @@
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
                               E-mail
                             </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" name="email" type="email">
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded sm:py-1 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" name="email" type="email">
                           </div>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-6">
@@ -81,97 +162,18 @@
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="content">
                               Message
                             </label>
-                            <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message" name="message"></textarea>
+                            <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded sm:py-1 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message" name="message"></textarea>
                           </div>
                         </div>
-                        <button class="text-black bg-white p-2 rounded-md hover:bg-black hover:text-white px-3 text-lg" type="submit">Send</button>
+                        <button class="neon-button " type="submit">Send</button>
                       </form>
                     </div>
-                </div>
+                    <lottie-player class="hidden lg:block mx-6" src="https://assets6.lottiefiles.com/packages/lf20_Ns4TLz.json"
+        background="transparent" speed="1" style="width: 650px; height: 500px;" loop autoplay></lottie-player>
           </form>
-          <lottie-player class="hidden lg:block mx-6" src="https://assets6.lottiefiles.com/packages/lf20_Ns4TLz.json"
-        background="transparent" speed="1" style="width: 450px; height: 500px;" loop autoplay></lottie-player>
         </div>
   </section>
-    </div>
-  <style>
-    iframe[seamless] {
-      border: none;
-    }
-    .home-sec{
-        margin-left: 0;
-        height: 768px;
-        background: url('./minimalism-1641823974329-5756.jpeg') no-repeat center center fixed;
-    }
-    body {
-      background-color: #000000;
-      color: white;
-    }
-    .res {
-      width: 1024px;
-      margin: auto;
-    }
-    .res-mob {
-        width: 100%;
-      margin: auto;
-    }
-    .medium-widget-article__title {
-      color: #fff;
-      font-size: 32px;
-      padding-bottom: 30px;
-      line-height: 40px;
-    }
-
-    .medium-widget-article__description {
-      color: rgb(150, 147, 147);
-      padding-bottom: 30px;
-      font-size: 22px;
-    }
-
-    .medium-widget-article__title:active {
-      text-decoration: underline;
-    }
-
-    .medium-widget-article__info {
-      margin-top: auto;
-    }
-
-    .medium-widget-article__author-name {
-      color: rgb(150, 147, 147);
-      font-size: 22px;
-    }
-
-    .medium-widget-article__clap {
-      color: rgb(150, 147, 147);
-    }
-
-    .medium-widget-article__date {
-      color: rgb(150, 147, 147);
-      font-size: 22px;
-    }
-
-    .medium-widget-article__column {
-      color: #fff;
-      background-color: #111827;
-      padding: 15px;
-      border-radius: 10px;
-      border-style: solid;
-      border-width: 5px;
-      width: 450px;
-      overflow: auto;
-      height: 400px;
-
-    }
-    .medium-widget-article__avatar-picture {
-        width: 80px;
-        height: 40px;
-    }
-    .carousel{
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 30px;
-}
-  </style>
+  <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
     (function () {
@@ -181,7 +183,95 @@
   <script src="scripts/contact.js"></script>
   <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
   <script>MediumWidget.Init({ renderTo: '#medium-widget', params: { "resource": "https://medium.com/@pranayjoshi4466", "postsPerLine": 3, "limit": 100, "picture": "big", "fields": ["description", "author", "claps", "publishAt"], "ratio": "landscape" } })</script>
+<<<<<<< HEAD
   
+=======
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+// now closing it when clicked
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="slick-theme.css"/>
+<script type="text/javascript" src="scripts/slick.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="scripts/donate.js"></script>
+<script type="text/javascript">
+    setTimeout(function(){
+        $('.medium-widget-article__row').slick({
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  slidesToShow: 1,
+    mobileFirst: true,
+    arrows: false,
+    margin:10,
+  responsive:[
+    {
+      breakpoint: 769,
+      settings: {
+        arrows: true,
+        autoplay: true,
+        margin:10,
+        autoplaySpeed: 2000,
+        slidesToShow: 2
+      }
+    },
+  ]
+});
+    }, 1000);
+  </script>
+<script type="text/javascript">
+        $('.about-wrapper').slick({
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  slidesToShow: 1,
+    mobileFirst: true,
+    arrows: true,
+    margin:5,
+  responsive:[
+  {
+      breakpoint: 1000,
+      settings: {
+        arrows: true,
+        autoplay: true,
+        margin:10,
+        autoplaySpeed: 2000,
+        slidesToShow: 4
+      }
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        arrows: true,
+        autoplay: true,
+        margin:10,
+        autoplaySpeed: 2000,
+        slidesToShow: 3
+      }
+    },
+  ]
+});
+  </script>
+>>>>>>> 591152c7301483c7748fdc5090216e34f6c5a90c
 </body>
 <script>
   const hamburger = document.querySelector(".hamburger");
