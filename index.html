@@ -61,7 +61,7 @@
                     <ul class="nav-menu flex w-3/5 justify-around z-10">
                         <li class="nav-item mt-4"><a href="" class="items"> Home </a></li>
                         <li class="nav-item mt-4"><a href="#vision" class="items"> Vision </a></li>
-                        <li class="nav-item mt-4"><a href="#about" class="items"> About </a></li>
+                        <li class="nav-item mt-4"><a href="#about" class="items"> The Team </a></li>
                         <li class="nav-item mt-4"><a href="#blogs" class="items">Blogs</a></li>
                         <li class="nav-item mt-4"><a href="#contact" class="items"> Contact</a></li>
                         <li class="nav-item mt-1"><a href="join.html" class="px-4 py-2 text-lg neon-a rounded-sm" >Join</a></li>
@@ -163,7 +163,7 @@
                     <form class="text-left lg:w-4/5  md:w-3/5 md:mx-auto lg:mx-0 md:text-center lg:text-left" id="myForm">
                         <div class="flex flex-wrap mb-3 lg:mb-6 mt-6">
                           <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
+                            <label class="block uppercase tracking-wide text-gray-300 text-xs font-bold mb-2" for="first-name">
                               First Name
                             </label>
                             <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded sm:py-1 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="name" id="name" type="text">
@@ -171,7 +171,7 @@
                         </div>
                         <div class="flex flex-wrap mb-3 lg:mb-6">
                           <div class="w-full px-3 mb-6 md:mb-0">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="first-name">
+                            <label class="block uppercase tracking-wide text-gray-300 text-xs font-bold mb-2" for="first-name">
                               Subject
                             </label>
                             <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded sm:py-1 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="subject" id="subject" type="text">
@@ -179,7 +179,7 @@
                         </div>
                         <div class="flex flex-wrap mb-3 lg:mb-6">
                           <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
+                            <label class="block uppercase tracking-wide text-gray-300 text-xs font-bold mb-2" for="email">
                               E-mail
                             </label>
                             <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded sm:py-1 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" name="email" type="email">
@@ -187,7 +187,7 @@
                         </div>
                         <div class="flex flex-wrap mb-3 lg:mb-6">
                           <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="content">
+                            <label class="block uppercase tracking-wide text-gray-300 text-xs font-bold mb-2" for="content">
                               Message
                             </label>
                             <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded sm:py-1 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message" name="message"></textarea>
@@ -239,7 +239,7 @@ function closeMenu() {
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script src="scripts/donate.js"></script>
 <script>
-    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@KonradDaWo')
+    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@beyondwelkinclub/")
    .then((res) => res.json())
    .then((data) => {
       // Filter for acctual posts. Comments don't have categories, therefore can filter for items with categories bigger than 0
@@ -259,6 +259,32 @@ function closeMenu() {
          text
       }
 
+      function convertToPlain(html){
+
+        // Create a new div element
+        var tempDivElement = document.createElement("div");
+
+        // Set the HTML content with the given value
+        tempDivElement.innerHTML = html;
+
+        // Retrieve the text property of the element 
+        return tempDivElement.textContent || tempDivElement.innerText || "";
+        }
+      function fetchAuthorName(words) {
+            words = convertToPlain(words)
+            var n = words.replace( /\n/g, " " ).split(" ");
+            console.log(n , "i")
+            for (let i=1; i < n.length; i++){
+                console.log(i)
+                if ((n[n.length - i] != "") && (n[n.length - i] !=" ")){
+                    console.log(n[n.length - i], "h")
+                    return n[n.length - i];
+                    break
+                } 
+            }
+            
+        }
+
       // Put things in right spots of markup
       let output = '';
       posts.forEach((item) => {
@@ -267,13 +293,13 @@ function closeMenu() {
                <img src="${item.thumbnail}" class="blog__topImg" style="cursor: pointer;"></img>
                <div class="blog__content" style="cursor: pointer;">
                   <div class="blog_preview">
-                     <h2 class="blog__title uppercase">${shortenText(item.title, 0, 30)+ '...'}</h2>
+                     <h2 class="blog__title uppercase">${shortenText(item.title, 0, 25)+ '...'}</h2>
                      <hr>
                      <p class="blog__intro mt-2">${shortenText(toText(item.content),0, 200)+ '...'}</p>
                   </div>
                   <hr>
                   <div class="blog__info">
-                     <span class="blog__author">${item.author}</span>
+                     <span class="blog__author">${fetchAuthorName(item.content)}</span>
                      <span class="blog__date">${shortenText(item.pubDate,0 ,10)}</span>
                   </div>
                </div>
