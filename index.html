@@ -266,8 +266,8 @@ function closeMenu() {
       posts.forEach((item) => {
          output += `
          <div class="blog__post border-2 border-white rounded-lg" style="width:450px;" onclick="window.open('${item.link}','mywindow');" style="cursor: pointer;">
-               <img src="${item.thumbnail}" class="blog__topImg"></img>
-               <div class="blog__content">
+               <img src="${item.thumbnail}" class="blog__topImg" style="cursor: pointer;"></img>
+               <div class="blog__content" style="cursor: pointer;">
                   <div class="blog_preview">
                      <h2 class="blog__title uppercase">${shortenText(item.title, 0, 30)+ '...'}</h2>
                      <hr>
