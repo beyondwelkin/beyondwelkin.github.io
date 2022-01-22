@@ -18,7 +18,7 @@
   <meta name="rating" content="General">
   <meta name="revisit-after" content="7 days">
   <meta name="keywords" content="aerospace, aerospace club, high school students, cosmos, space, high school students opportunites, beyond Welkin">
-  <link rel="icon" type="image/x-icon" href="logo.png" style="border-radius: 100%;">
+  <link rel="icon" type="image/x-icon" href="logo.png">
   <title>Beyond Welkin</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/gh/LexmarkWeb/csi.js@0.1.0/csi.min.js"></script>
@@ -50,7 +50,7 @@
             <div class="w-full flex text-base pt-4" id="navbar">
                 <nav class=" flex w-full justify-between">
                     <div class="flex lg:mt-2 ml-2">
-                        <img src="logo.png" alt="" id="logo" class="w-8 h-8 mt-1">
+                        <img src="logo.png" alt="" id="logo" class="w-12 h-12 mt-1">
                         <p class="pl-2 text-3xl" >BEYOND WELKIN</p>
                     </div>
                     <div class="hamburger mx-2">
@@ -100,14 +100,15 @@
         <div class="w-auto">
             <div class="h-1 mx-auto  w-24 my-0 py-0 rounded-t" style="background-color: #59C9E6;"></div>
         </div>
-        <div id="medium-widget" class="text-white m-4"></div>
+        <div class="text-white m-4 blog__slider">
+        </div>
     </section>
     <section id ="about" class="my-20 lg:my-30">
         <p class="text-white mx-auto w-full text-center" style="font-size: 45px;">Our Team</p>
         <div class="w-auto">
             <div class="h-1 mx-auto  w-40 my-0 py-0 rounded-t" style="background-color: #59C9E6;"></div>
         </div>
-        <div class="carousel-wrap mx-6 md:mx-12 lg:mx-0">
+        <div class="mx-6 md:mx-12 lg:mx-0">
             <div class=" lg:flex px-6 pt-2 text-center about-wrapper md:px-0 leading-tight">
               <div class=" m-5 sm:m-2 bg-black lg:w-1/3 rounded-lg py-5 shadow-lg border-2 border-bg-white px-6 neon-card" style="width: 200px;">
                 <img src="about_pictures/samriddhi.jpeg" alt="Billie"  class="h-36 w-36 rounded-full mx-auto border-4 border-gray-300 " >
@@ -131,7 +132,7 @@
                 </div>
               </div>
               <div class=" m-5 sm:m-2 bg-black lg:w-1/3 rounded-lg py-5 shadow-lg border-2 border-bg-white px-6 neon-card" style="width: 200px;">
-                <img src="about_pictures/pourush.jpeg" alt="Billie"  class="h-36 w-36 rounded-full mx-auto border-4 border-gray-300 " >
+                <img src="about_pictures/pourush.jpg" alt="Billie"  class="h-36 w-36 rounded-full mx-auto border-4 border-gray-300 " >
                 <div class="">
                   <h4 class="text-xl font-semibold pt-4 pb-2 ">POURUSH K.</h4>
                   <a href = "mailto: abc@example.com" class="text-xs text-gray-200 pb-2 lowercase" style="letter-spacing: 0.05em; font-weight: lighter;">pourushkumar119@gmail.com</a>
@@ -204,6 +205,7 @@
   </section>
 </div>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
     (function () {
@@ -211,8 +213,6 @@
     })();
   </script>
   <script src="scripts/contact.js"></script>
-  <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
-  <script>MediumWidget.Init({ renderTo: '#medium-widget', params: { "resource": "https://medium.com/@pranayjoshi4466", "postsPerLine": 3, "limit": 100, "picture": "big", "fields": ["description", "author", "claps", "publishAt"], "ratio": "landscape" } })</script>
   <script>
     const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -240,23 +240,66 @@ function closeMenu() {
 <script type="text/javascript" src="scripts/slick.min.js"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script src="scripts/donate.js"></script>
+<script>
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@KonradDaWo')
+   .then((res) => res.json())
+   .then((data) => {
+      // Filter for acctual posts. Comments don't have categories, therefore can filter for items with categories bigger than 0
+      const res = data.items //This is an array with the content. No feed, no info about author etc..
+      const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
+
+      // Functions to create a short text out of whole blog's content
+      function toText(node) {
+         let tag = document.createElement('div')
+         tag.innerHTML = node
+         node = tag.innerText
+         return node
+      }
+      function shortenText(text,startingPoint ,maxLength) {
+         return text.length > maxLength?
+         text.slice(startingPoint, maxLength):
+         text
+      }
+
+      // Put things in right spots of markup
+      let output = '';
+      posts.forEach((item) => {
+         output += `
+         <div class="blog__post border-2 border-white rounded-lg" style="width:450px;" onclick="window.open('${item.link}','mywindow');" style="cursor: pointer;">
+               <img src="${item.thumbnail}" class="blog__topImg"></img>
+               <div class="blog__content">
+                  <div class="blog_preview">
+                     <h2 class="blog__title uppercase">${shortenText(item.title, 0, 30)+ '...'}</h2>
+                     <hr>
+                     <p class="blog__intro mt-2">${shortenText(toText(item.content),0, 200)+ '...'}</p>
+                  </div>
+                  <hr>
+                  <div class="blog__info">
+                     <span class="blog__author">${item.author}</span>
+                     <span class="blog__date">${shortenText(item.pubDate,0 ,10)}</span>
+                  </div>
+               </div>
+         </div>`
+
+      })
+      document.querySelector('.blog__slider').innerHTML = output
+})
+</script>
 <script type="text/javascript">
     setTimeout(function(){
-        $('.medium-widget-article__row').slick({
+        $('.blog__slider').slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
   slidesToShow: 1,
     mobileFirst: true,
     arrows: false,
-    margin:10,
   responsive:[
     {
       breakpoint: 769,
       settings: {
         arrows: true,
         autoplay: true,
-        margin:10,
         autoplaySpeed: 2000,
         slidesToShow: 2
       }
@@ -264,31 +307,6 @@ function closeMenu() {
   ]
 });
     }, 2000);
-  </script>
-  <script type="text/javascript">
-    setTimeout(function(){
-        $('.medium-widget-article__row').slick({
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  slidesToShow: 1,
-    mobileFirst: true,
-    arrows: false,
-    margin:10,
-  responsive:[
-    {
-      breakpoint: 769,
-      settings: {
-        arrows: true,
-        autoplay: true,
-        margin:10,
-        autoplaySpeed: 2000,
-        slidesToShow: 2
-      }
-    },
-  ]
-});
-    }, 5000);
   </script>
 <script type="text/javascript">
         $('.about-wrapper').slick({
