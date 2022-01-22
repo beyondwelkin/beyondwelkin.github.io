@@ -83,10 +83,3 @@
     border: 1px solid lightblue;
     background-color: lightblue;
 }
-
-@media screen and (max-width:800px) {
-    .blog__slider {
-        margin-left: 80px;
-        margin-right: 80px;
-    }
-}
