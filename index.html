@@ -239,7 +239,7 @@ function closeMenu() {
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script src="scripts/donate.js"></script>
 <script>
-    fetch("https://medium.com/@beyondwelkinclub?source=rss-23e4ea418abb------2")
+    fetch("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40beyondwelkinclub")
    .then((res) => res.json())
    .then((data) => {
       // Filter for acctual posts. Comments don't have categories, therefore can filter for items with categories bigger than 0
